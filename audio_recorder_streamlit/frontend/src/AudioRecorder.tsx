@@ -283,6 +283,9 @@ class AudioRecorder extends StreamlitComponentBase<AudioRecorderState> {
       url: audioUrl,
       type: this.type,
     });
+
+    this.leftchannel.length = this.rightchannel.length = 0;
+    this.recordingLength = 0;
   };
 
   public render = (): ReactNode => {
